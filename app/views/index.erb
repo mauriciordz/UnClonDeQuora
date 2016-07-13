@@ -1,0 +1,31 @@
+  <center><h1>Bienvenido a Fake Quora!</h1></center>
+  <p>Vamos a elegir que es lo que quieres hacer: </p>
+
+<p style="color:red" ><%= @message %></p>
+<p style="color:blue"=><%= session[:user_name] %></p>
+
+  
+<form id="registro" action="/register_temp" method="get">
+    <br><input type="submit" value="Registrar!"> <br>
+</form>
+
+
+
+<% if !logged_in? %>
+	<form id="login" action="/login_temp" method="get">
+    <br><input type="submit" value="Login!"> <br>
+  </form>
+<% else %>
+  <form id="logout" action="/logout" method="get">
+    <br><input type="submit" value="Logout!"> <br>
+  </form>
+  <form id="edit" action="/register_temp" method="get">
+    <br><input type="submit" value="Edit User!"> <br>
+  </form>
+<% end %>
+
+<form id="jugar" action="/quora" method="post">
+    <br><input type="submit" value="Quora!"> <br>
+</form>
+
+

@@ -1,0 +1,37 @@
+<h2> Este es quora, eligue la pregunta que prefieras <%= session[:user_name] %> ! </h2>
+
+
+  <% @question_val.each do |question| %>
+    
+  <a href="/quora/question/<%=question.id%>"><%= question.question %></a>  <br>
+  <a href="/quora/question/me_gusta/<%=question.id%>">Me gusta</a> <%= question.vote_like %>
+  <a href="/quora/question/me_disgusta/<%=question.id%>">Me disgusta</a> <%= question.vote_dislike %>
+
+  <br>
+  <br>
+
+
+  <%end%>
+
+  <form action="/quora/temp_new_question" method="get">
+    <br><input type="submit" value="New Question!"> <br>
+  </form>
+
+  <form action="/salir" method="get">
+    <br><input type="submit" value="Salir!"> <br>
+  </form>
+
+<!--   <form action="/login" method="post">
+   
+    Haz tu login!
+    <br>
+    <p>Mail</p><input type="email" name="Mail" ><br>
+    <p>Contraseña</p><input type="password" name="Contraseña" ><br>
+    <br>
+
+    <input type="submit" value="Login!"> <br>
+
+  </form>
+
+  
+ -->

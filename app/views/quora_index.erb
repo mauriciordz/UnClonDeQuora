@@ -1,0 +1,14 @@
+<center><h1>Bienvenido <%= session[:user_name] %> a Fake Quora!</h1></center>
+  <p>Vamos a elegir que es lo que quieres hacer: </p>
+
+
+  
+  <p>Ver preguntas: </p>
+<form id="questions" action="/quora/question_temp" method="get">
+  <br><input type="submit" value="Questions!"> <br>
+</form>
+
+
+<form action="/salir" method="get">
+    <br><input type="submit" value="Salir!"> <br>
+ </form>

@@ -1,0 +1,12 @@
+
+
+<h2> Genera tu nueva pregunta  <%= session[:user_name] %> :</h2>
+
+ <form action="/quora/new_question" method="post">
+ 	<br><input type="text" name="question_val"> <br>
+    <br><input type="submit" value="Send Question!"> <br>
+ </form>
+
+ <form action="/salir" method="get">
+    <br><input type="submit" value="Salir!"> <br>
+ </form>
